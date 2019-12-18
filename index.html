@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gta - Phone</title>
+    <script src="https://kit.fontawesome.com/57b65d1d2a.js" crossorigin="anonymous"></script>
+  </head>
+  <style>body {
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+  }
+  
+  .phone {
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px;
+    border-radius: 18px;
+    color: #080808;
+    width: 200px;
+    height: 350px;
+    border-style: solid;
+    background-color: black;
+  }
+  .logo {
+    background-color: black;
+    margin: 0;
+  }
+  
+  .disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+  .phone-outside h3 {
+    color: white;
+    margin: 6px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .time h5 {
+    color: white;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .phone-screen {
+    z-index: 1500;
+  
+    background-color: #0003ff;
+  }
+  .line {
+    background-color: #8aa5af;
+    margin-top: 2px;
+    padding: 1px;
+  }
+  .line h1 {
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  button {
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  
+  .setttings-b {
+    margin: 3px;
+    cursor: pointer;
+    border: none;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    overflow: hidden;
+
+  }
+  .line i {
+    background-color: none;
+
+  }
+  
+  .phone-bottom {
+    color: white;
+    margin-left: 30px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: 100px;
+    z-index: 15000;
+    background-color: black;
+      }
+  .message-app {
+    display: none;
+    background-color: white;
+    color: white;
+    z-index: 1400;
+  }
+  .message-app h6 {
+    padding: 2.6px;
+    margin: 0;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+
+    }
+.cc {
+  font-size: medium;
+  margin-left: 13.5px;
+}
+
+.contactApp h5 {
+  padding: 8.5px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+
+}
+#conApp {
+  display: none;
+  padding:0;
+    /* margin: 0; */
+    font-size: 15px;
+}
+
+.quick-app {
+    display: none;
+    z-index: 1400;
+  }
+  .quick-app h6{
+    padding: 8.5px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+  }
+.quick:hover {
+  background-color: gray;
+margin: 0;
+}
+.message:hover {
+  margin: 0;
+  background-color: gray;
+}
+.contact:hover {
+  background-color: gray;
+margin: 0;
+}
+
+.setting-app {
+    display: none;
+    z-index: 1400;
+    padding: 8px;
+
+  }
+  .setting-app h6{
+    padding: 8.3px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+
+
+  }
+
+
+  /* Jobs App */
+.jobs-app {
+  display: none;
+    /* background-color: white; */
+    color: white;
+    z-index: 1400;
+  }
+  .jobs-app h6{
+    padding: 5.5px;
+    margin: 0;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+  }
+
+  .jobs-app p{
+    margin: 0;
+    padding: 5.5;
+    font-size: 15px;
+    margin-left: 8px;
+  }
+  .job:hover {
+    background-color: gray;
+    margin: 0;
+    border: 20px;
+    border-radius: 7px;
+  }
+  /* End jobs App */
+
+
+/* Serve App */
+  .serv-app {
+  display: none;
+    /* background-color: white; */
+    color: white;
+    z-index: 1400;
+  }
+  .serv-app h6{
+    padding: 9.1px;
+    margin: 0;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 5px;
+  }
+  .securo:hover {
+    background-color: gray;
+    margin: 0;
+  }
+  /* End serve app */
+
+
+  </style>
+  <body>
+<div class="phone1">
+    <div class="phone">
+      <!-- Phone shell -->
+      <div class="phone-outside" >
+        <div class="logo disable-select"><h3>iFruit</div>
+        <div class="time disable-select">
+          <h5 id="timer"></h5>
+        </div>
+      </div>
+      <!-- End Phone shell -->
+      <!-- Apps -->
+      <div class="line disable-select"><h1 id="changer" >Welcome</h1></div>
+      <div class="phone-screen" id="phone-screen">
+        <div id="line1" class="line1"><button onclick="email()"><i class="fas fa-envelope"></i></button><button onclick="messages()"><i class="fas fa-comment"></i></button><button onclick="Contacts()"><i class="fas fa-address-book"></i></button></div>
+        <div id="line2" class="line2"><button onclick="qjob()"><i class="fas fa-users"></i></button><button onclick="Jobs()"><i class="fas fa-clipboard-check"></i></button><button onclick="settings()"><i class="fas fa-cog"></i></button></div>
+        <div id="line3" class="line3"><button onclick="camera()"><i class="fas fa-camera"></i></button><button onclick="webbrowser()"><i class="fas fa-globe"></i></button><button onclick="Serve()"><i class="fas fa-exclamation-triangle"></i></button></div>
+      <!-- End Apps -->
+
+
+       <!-- Messages App  -->
+        <div id="messApp" class="message-app">
+          <div class="message">
+            <h6>&bullet; Maude</h6>
+            <div class="cc">Hello stranger! I interest...</div>
+          </div>
+          <div class="message">
+            <h6>&bullet; Simeon</h6>
+            <div class="cc">Grab these vehicles: Ki...</div>
+          </div>
+          <div class="message">
+            <h6>&bullet; Lester</h6>
+            <div class="cc">If the goverment falls an...</div>
+          </div>
+          <div class="message">
+            <h6>&bullet; Tony</h6>
+            <div class="cc">You want to be a club o...</div>
+          </div>
+          <div class="message">
+            
+            <h6>&bullet; Unknown</h6>
+            <div class="cc">Watch out, someone h...</div>
+          </div>
+      </div>
+      <!-- End Messages App -->
+
+
+      <!-- Conact app  -->
+      <div class="contactApp" id="conApp">
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Dr. Friedlander</h5>
+        </div>
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Emergency</h5>
+        </div>
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Lester</h5>
+        </div>
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Maude</h5>
+        </div>
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Tony</h5>
+        </div>
+        <div class="contact">
+          <h5><i class="fas fa-user"></i> Wendy</h5>
+        </div>
+      </div>
+      <!-- End contact app -->
+
+
+      <!-- Quick jobs app -->
+      <div id="qapp" class="quick-app">
+        <div class="quick">
+          <h6>Play Heist</h6>
+        </div>
+        <div class="quick">
+          <h6>Play Adversary Mode</h6>
+        </div>
+        <div class="quick">
+          <h6>Play Random</h6>
+        </div>
+        <div class="quick">
+          <h6>Play Race</h6>
+        </div>
+        <div class="quick">
+          <h6>Play Stunt Race</h6>
+        </div>
+        <div class="quick">
+          <h6>Play Deathmatch</h6>
+        </div>
+    </div>
+      <!-- End Quick jobs app -->
+  
+
+      <!-- Setting app -->
+      <div id="setting" class="setting-app">
+        <button onclick="red()" class="setttings-b">background color red</button<br>
+        <button onclick="blue()" class="setttings-b">background color blue</button><br>
+        <button onclick="green()" class="setttings-b">background color green</button><br>
+        <button onclick="ring1()"class="setttings-b">Ringtone 1</button><br>
+        <button onclick="ring2()"class="setttings-b">Ringtone 2</button><br>
+        <button onclick="ring3()"class="setttings-b">Ringtone 3</button><br>
+    </div>
+      <!-- End Setting app -->
+
+      <!-- Securo serv App -->
+      <div id="serv" class="serv-app">
+        <div class="securo">
+          <h6>No VIP Invites</h6>
+          <br>
+          <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <!-- End Securo serv App -->
+
+
+      <!-- Jobs list app -->
+      <div id="jobs" class="jobs-app">
+        <div class="job">
+          <h6>&bullet; Martin</h6>
+          <p>Invite from death from a...<br>(1-4 Players)</p> 
+        </div>
+        <div class="job">
+          <h6>&bullet; Lamar</h6>
+          <p>Invite to lost MC RIP... <br>(1-2 Players)</p>
+        </div>
+        <div class="job">
+          <h6>&bullet; Lester</h6>
+          <p>Invite to Hack and Dash... <br> (1-4 Players)</p>
+        </div>
+        <br>
+    </div>
+      <!-- End Jobs list app -->
+    </div>
+
+
+    <!-- Phone bottom -->
+    <div class="phone-bottom">
+      <i  onclick="search()" class="fas fa-search"></i>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+      <i onclick="home()"  class="fas fa-apple-alt"></i>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i onclick="back()" class="fas fa-arrow-left"></i>
+    </div>
+    <!-- End phone bottom -->
+      </div>
+    </div>
+</div>
+   
+<script>
+  const d = new Date();
+  const weekday = new Array(7)
+  weekday[1] = "Mon"
+  weekday[2] = "Tue"
+  weekday[3] = "Wed"
+  weekday[4] = "Thu"
+  weekday[5] = "Fri"
+  weekday[6] = "Sat"
+  weekday[7] = "Sun"
+  const day = weekday[d.getDay()];
+  document.getElementById("timer").innerHTML = `<i class="fas fa-comments"></i>&nbsp;&nbsp;${day}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${d.getHours()}:${d.getMinutes()}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-battery-full"></i>`
+  function messages() {
+  document.getElementById("changer").textContent = "Messages";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("messApp").style.display = "inline"
+}
+  function email() {
+  document.getElementById("changer").textContent = "Emails";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+
+}
+  function Contacts() {
+  document.getElementById("changer").textContent = "Contacts";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("conApp").style.display = "inline"
+}
+  function qjob() {
+  document.getElementById("changer").textContent = "Start Quick Job";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("qapp").style.display = "block"
+}
+  function Jobs() {
+  document.getElementById("changer").textContent = "Job List";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("jobs").style.display = "block"
+}
+  function settings() {
+  document.getElementById("changer").textContent = "Settings";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("setting").style.display = "block"
+}
+  function camera() {
+  document.getElementById("changer").textContent = "Camera";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+}
+  function webbrowser() {
+  document.getElementById("changer").textContent = "Browser";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+}
+  function Serve() {
+  document.getElementById("changer").textContent = "SecuroServ";
+  document.getElementById("line1").style.display = "none"
+  document.getElementById("line2").style.display = "none"
+  document.getElementById("line3").style.display = "none"
+  document.getElementById("serv").style.display = "block"
+}
+  function back() {
+  document.getElementById("changer").textContent = "Welcome";
+  document.getElementById("line1").style.display = "block"
+  document.getElementById("line2").style.display = "block"
+  document.getElementById("line3").style.display = "block"
+  document.getElementById("messApp").style.display = "none"
+  document.getElementById("conApp").style.display = "none"
+    document.getElementById("qapp").style.display = "none"
+    document.getElementById("setting").style.display = "none"
+    document.getElementById("jobs").style.display = "none"
+    document.getElementById("serv").style.display = "none"
+}
+  function home() {
+  document.getElementById("changer").textContent = "Welcome";
+  document.getElementById("line1").style.display = "block"
+  document.getElementById("line2").style.display = "block"
+  document.getElementById("line3").style.display = "block"
+  document.getElementById("messApp").style.display = "none"
+  document.getElementById("conApp").style.display = "none"
+  document.getElementById("qapp").style.display = "none"
+  document.getElementById("setting").style.display = "none"
+  document.getElementById("jobs").style.display = "none"
+  document.getElementById("serv").style.display = "none"
+}
+  function search() {
+  document.getElementById("changer").textContent = "Search";
+}
+function red() {
+  document.getElementById("phone-screen").style.backgroundColor = "red"
+}
+function blue() {
+  document.getElementById("phone-screen").style.backgroundColor = "blue"
+}
+function green() {
+  document.getElementById("phone-screen").style.backgroundColor = "green"
+}
+
+function ring1() {
+  const audio = new Audio("./audio/gta_5_online_cell.mp3")
+  audio.play()
+}
+function ring2() {
+  const audio = new Audio("./audio/gta_v_franklin.mp3")
+  audio.play()
+}
+function ring3() {
+  const audio = new Audio("./audio/gta_v_trevor_ring_3.mp3")
+  audio.play()
+}
+  </script>
+  </body>
+</html>
