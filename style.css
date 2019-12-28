@@ -1,0 +1,326 @@
+:root {
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+}
+/* Main phone shell */
+.phone {
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid;
+  border-radius: 18px;
+  color: #080808;
+  width: 200px;
+  height: 350px;
+  background-color: black;
+}
+/* iFruit logo */
+.logo {
+  background-color: black;
+  margin: 0;
+}
+
+.phone-outside h3 {
+  color: white;
+  margin: 6px;
+  text-align: center;
+  align-items: center;
+}
+
+.time h5 {
+  color: white;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
+#phone-screen {
+  width: auto;
+  height: 210px;
+  border: 2px solid;
+  background-color: #0003ff;
+}
+.line {
+  background-color: #8aa5af;
+  margin-top: 2px;
+  padding: 1px;
+}
+.line h1 {
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  margin: 15px;
+  cursor: pointer;
+  border: none;
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* overflow: hidden; */
+}
+
+#phone-bottom {
+  color: white;
+  margin-top: 17px;
+  cursor: pointer;
+  z-index: 15000;
+}
+#phone-bottom > i {
+  margin-left: 38px;
+}
+.message-app {
+  display: none;
+  background-color: white;
+  color: white;
+  z-index: 1400;
+}
+.message-app h6 {
+  padding: 2.6px;
+  margin: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+.cc {
+  font-size: medium;
+  margin-left: 13.5px;
+}
+
+#conApp h5 {
+  padding: 8.5px;
+  margin: 0px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+#conApp {
+  width: 10px;
+  height: 210px;
+  /* overflow: scroll; */
+  display: none;
+  font-size: 15px;
+}
+.contact:hover {
+  background-color: gray;
+  margin: 0;
+  font-size: 15px;
+}
+
+.quick-app {
+  display: none;
+  z-index: 1400;
+}
+.quick-app h6 {
+  padding: 8.5px;
+  margin: 0px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+.quick:hover {
+  background-color: gray;
+  margin: 0;
+}
+.message:hover {
+  margin: 0;
+  background-color: gray;
+}
+
+/* Settings App */
+#setting {
+  display: none;
+  z-index: 1400;
+  padding: 8px;
+}
+#setting h6 {
+  padding: 8.3px;
+  margin: 0px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+#setting-color {
+  padding: 0px;
+  /* margin: 0px; */
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+#setting-ringtones {
+  padding: 0px;
+  /* margin: 0px; */
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+#setting-color {
+  display: none;
+  margin: 0;
+}
+#setting-ringtones {
+  display: none;
+  margin: 0;
+}
+#setttings-b {
+  margin: 2px;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  height: 35px;
+  display: inline-block;
+  font-size: 14px;
+}
+#color {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+}
+#ringtones {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+}
+/* End Settings App */
+
+/* Jobs App */
+#jobs {
+  display: none;
+  color: white;
+}
+#jobs h6 {
+  padding: 5.5px;
+  margin: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+#jobs p {
+  margin: 0;
+  padding: 5.5;
+  font-size: 15px;
+  margin-left: 8px;
+}
+#job:hover {
+  background-color: gray;
+  margin: 0;
+  border: 20px;
+  border-radius: 7px;
+}
+/* End jobs App */
+
+/* Serve App */
+.serv-app {
+  display: none;
+  /* background-color: white; */
+  color: white;
+  z-index: 1400;
+}
+.serv-app h6 {
+  padding: 9.1px;
+  margin: 0;
+  font-size: 17px;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 5px;
+}
+.securo:hover {
+  background-color: gray;
+  margin: 0;
+}
+/* End serve app */
+
+/* Email App */
+#email_App {
+  display: none;
+  position: absolute;
+  transform: rotate(270deg);
+  top: 55%;
+  left: -20%;
+}
+/* #email {
+    display: none;
+  position: absolute;
+  transform: rotate(270deg);
+  top: 65%;
+  left: -20%;
+} */
+/* End Email App */
+
+/* Browser App */
+#browser {
+  display: none;
+}
+/* End browser app */
+
+/* Camera App */
+#camera {
+  background-color: black;
+  display: none;
+}
+#grid {
+  margin: 0;
+  border: 2px solid white;
+  width: auto;
+  height: 210px;
+}
+#line {
+  display: block;
+  /* margin-top: 100px; */
+  color: white;
+  border-bottom: 2px solid white;
+  height: 40px;
+}
+#line-v-1 {
+  position: absolute;
+  border-left: 2px solid white;
+  height: 210px;
+  display: inline-block;
+  margin-left: 40px;
+}
+#line-v-2 {
+  position: absolute;
+  border-left: 2px solid white;
+  height: 210px;
+  display: inline-block;
+  margin-left: 80px;
+}
+#line-v-3 {
+  position: absolute;
+  border-left: 2px solid white;
+  height: 210px;
+  display: inline-block;
+  margin-left: 120px;
+}
+#line-v-4 {
+  position: absolute;
+  border-left: 2px solid white;
+  height: 210px;
+  display: inline-block;
+  margin-left: 160px;
+  /* transform: translate(); */
+}
+/* End Camera App */
