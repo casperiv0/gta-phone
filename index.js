@@ -1,21 +1,21 @@
 // Timer >
 const d = new Date();
 const weekday = new Array(7);
+weekday[0] = "Sun";
 weekday[1] = "Mon";
 weekday[2] = "Tue";
 weekday[3] = "Wed";
 weekday[4] = "Thu";
 weekday[5] = "Fri";
 weekday[6] = "Sat";
-weekday[7] = "Sun";
 const day = weekday[d.getDay()];
 setInterval(() => {
   const d = new Date();
   const CurrentTime = `<i class="fas fa-comments"></i>&nbsp;&nbsp;${day}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${
     d.getHours() < 10 ? "0" : ""
-  }${d.getHours()}:${
+    }${d.getHours()}:${
     d.getMinutes() < 10 ? "0" : ""
-  }${d.getMinutes()}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-battery-full"></i>`;
+    }${d.getMinutes()}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-battery-full"></i>`;
   document.getElementById("timer").innerHTML = CurrentTime;
 }, 10);
 
@@ -145,10 +145,10 @@ function home() {
   document.getElementById("settings-ringtones").style.display = "none";
   document.getElementById("color").style.display = "block";
   document.getElementById("ringtones").style.display = "block";
-  document.getElementById("email").style.display = "none";
   document.getElementById("browser").style.display = "none";
   document.getElementById("camera").style.display = "none";
   document.getElementById("grid").style.display = "none";
+  document.getElementById("browser").style.display = "none";
 }
 // Search button
 function search() {
