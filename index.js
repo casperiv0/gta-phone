@@ -91,6 +91,7 @@ function camera() {
   document.getElementById("line2").style.display = "none";
   document.getElementById("line3").style.display = "none";
   document.getElementById("camera").style.display = "block";
+  document.getElementById("grid").style.display = "block";
 }
 // Browser App
 function webbrowser() {
@@ -119,18 +120,17 @@ function back() {
   document.getElementById("qapp").style.display = "none";
   document.getElementById("setting").style.display = "none";
   document.getElementById("jobs").style.display = "none";
-  document.getElementById("serv").style.display = "none";
   document.getElementById("settings-color").style.display = "none";
+  document.getElementById("serv").style.display = "none";
   document.getElementById("settings-ringtones").style.display = "none";
   document.getElementById("color").style.display = "block";
   document.getElementById("ringtones").style.display = "block";
-  document.getElementById("email").style.display = "none";
   document.getElementById("browser").style.display = "none";
   document.getElementById("camera").style.display = "none";
   document.getElementById("grid").style.display = "none";
 }
 // Home page Function
-function home() {
+const home = () => {
   document.getElementById("changer").textContent = "Welcome";
   document.getElementById("line1").style.display = "block";
   document.getElementById("line2").style.display = "block";
@@ -148,7 +148,6 @@ function home() {
   document.getElementById("browser").style.display = "none";
   document.getElementById("camera").style.display = "none";
   document.getElementById("grid").style.display = "none";
-  document.getElementById("browser").style.display = "none";
 }
 // Search button
 function search() {
