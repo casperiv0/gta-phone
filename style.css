@@ -10,7 +10,18 @@ body {
   padding: 0;
   margin: 0;
   background-color: gray;
+  font-family: sans-serif;
 }
+
+.header {
+  text-align: center;
+}
+
+.header a {
+  color: #27299c;
+  text-decoration: none;
+}
+
 /* Main phone shell */
 .phone {
   font-family: sans-serif;
