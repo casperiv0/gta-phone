@@ -12,3 +12,6 @@ A cool project I created! Has some cool functions such as, change background, op
 
 - More JavaScript Fucntions
 - More CSS
+
+
+
